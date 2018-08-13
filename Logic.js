@@ -20,7 +20,7 @@ const Contact = mongoose.model('Contact', contactSchema);
 
 const addContact = (contact) => {
     Contact.create(contact, (err) => {
-        asser.equal(null, err);
+        assert.equal(null, err);
         console.info('New Contact added');
         db.disconnect();
     })
