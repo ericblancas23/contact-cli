@@ -25,6 +25,15 @@ const questions = [{
 const { addContact, getContact} = require('./Logic');
 
 program
+    .command('addContact')
+    .alias('a')
+    .description('Add a Contact')
+    .action(()=> {
+        prompt(questions).then(answers => 
+        addContact(answers));
+    })
+
+program
     .version('0.0.1')
     .description('Contact management system')
 
