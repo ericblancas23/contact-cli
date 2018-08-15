@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const program = require('commander');
 const { prompt } = require('inquirer');
 
@@ -31,6 +33,7 @@ program
     .action(()=> {
         prompt(questions).then(answers => 
         addContact(answers));
+
     })
 
 program
