@@ -54,3 +54,10 @@ program
     .action(name => getContact(name))
 
     program.parse(process.argv);
+
+if (!process.argv.slice(2).length || !/[ardul]/.test(process.argv.slice(2))) {
+    program.outputHelp();
+    program.exit();
+}
+
+program.parse(process.argv)
